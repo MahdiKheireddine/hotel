@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Paradise Palace</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+    integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+  <header class="header" id="navigation-menu">
+    <div class="container">
+      <nav>
+
+        <ul class="nav-menu">
+          <li> <a href="#hoome" class="nav-link">Accueil</a> </li>
+          <li> <a href="avis.html#h" class="nav-link">Avis</a> </li>
+          <li> <a href="#rooms" class="nav-link">Chambres</a> </li>
+          <li> <a href="#contact" class="nav-link">Contact</a> </li>
+        </ul>
+
+        <div class="hambuger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <script>
+    const hambuger = document.querySelector('.hambuger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hambuger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+      hambuger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+
+    const navLink = document.querySelectorAll('.nav-link');
+    navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+    function closeMenu() {
+      hambuger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }
+  </script>
+
+  <section class="regulations" id="regulations">
+    <div class="head_container">
+      <div class="box">
+        <div class="text">
+          <h1>Règlement Intérieur de l'Hôtel</h1>
+          <h2>1. Horaires d'ouverture</h2>
+  <p>L'hôtel est ouvert 24h/24, 7j/7. Les services de réception et de conciergerie sont disponibles à tout moment.</p>
+
+  <h2>2. Enregistrement et Départ</h2>
+  <p>Les clients peuvent s'enregistrer à partir de 14h00. Le départ doit être effectué avant 12h00. Des arrangements spéciaux peuvent être pris sur demande préalable.</p>
+
+  <h2>3. Politique d'annulation</h2>
+  <p>Les annulations doivent être effectuées au moins 48 heures avant la date d'arrivée pour éviter des frais d'annulation.</p>
+
+  <h2>4. Comportement des clients</h2>
+  <p>Les clients sont priés de respecter la tranquillité des autres clients et de ne pas perturber la paix de l'hôtel. Tout comportement inapproprié peut entraîner l'expulsion.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function img(anything) {
+      document.querySelector('.slide').src = anything;
+    }
+
+    function change(change) {
+      const line = document.querySelector('.image');
+      line.style.background = change;
+    }
+  </script>
+
+</body>
+
+</html>
